@@ -1,0 +1,9 @@
+-- Select first 8 customers--
+select S.customer_id
+    ,S.PLAN_ID
+    ,S.START_DATE
+    ,P.PLAN_NAME
+    ,P.PRICE
+from subscriptions S
+inner join plans P on S.PLAN_ID = P.PLAN_ID
+where customer_id <=8
